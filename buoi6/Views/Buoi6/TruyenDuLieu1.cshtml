@@ -1,0 +1,11 @@
+﻿
+@{
+    ViewData["Title"] = "TruyenDuLieu1";
+    var sanPham = ViewBag.SanPham as HangHoa;
+}
+
+<h1>TruyenDuLieu1</h1>
+<h2>@ViewBag.Ten - @ViewBag.NgayThanhLap</h2>
+<h3>DT: @ViewData["DienThoai"] - @ViewData["Tuoi"]</h3>
+<h3>@ViewBag.SanPham.TenHH</h3>
+<h3>@sanPham.TenHH - @sanPham.GiaBan (giam@sanPham.GiamGia)</h3>
