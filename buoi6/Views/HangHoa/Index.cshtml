@@ -34,24 +34,23 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.MaHH)
+                @item.MaHH
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.TenHH)
+                @item.TenHH
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.DonGia)
+                @item.DonGia.ToString("#,##0") d
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.GiamGia)
+                @item.GiamGia %
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.GiaBan)
+                @item.GiaBan.ToString("#,##0") d
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                <a asp-action="Edit" asp-route-id="@item.MaHH" class="btn btn-primary">sua</a>
+                <a asp-action="Delete" asp-route-id="@item.MaHH" class="btn btn-danger">xoa</a>
             </td>
         </tr>
 }

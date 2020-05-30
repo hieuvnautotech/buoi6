@@ -19,5 +19,18 @@ namespace buoi6.Controllers
         {
             return View(dsHangHoa);
         }
+
+        public IActionResult Create() 
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public IActionResult Create(HangHoa hangHoa) 
+        {
+            dsHangHoa.Add(hangHoa);
+            return View("Index", dsHangHoa);
+            //return Redirect
+        }
     }
 }
